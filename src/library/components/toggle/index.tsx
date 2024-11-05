@@ -1,8 +1,5 @@
 import { useState } from "react"
 
-// Assets
-import ImagePlaceholder from '../../assets/ImagePlaceholder.webp'
-
 // Constants
 import { CSSClassnames, Repeat } from "../../constants"
 
@@ -39,7 +36,7 @@ export default function Toggle({ image, className, borderRadius = 'round', onCli
         `${CSSClassnames.Library}-Component-Toggle_img`
     ].join(Repeat.WhiteSpace)
 
-    const img_Source = image.length === 0 ? ImagePlaceholder : image
+    const img_Source = image.length === 0 ? "https://placeholder.pics/svg/18x18" : image
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         const newStatus = !Active

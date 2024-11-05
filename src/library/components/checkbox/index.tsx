@@ -1,8 +1,9 @@
 import { useState } from "react"
 
-// Assets
-import CheckboxSVG from '../../assets/Checkbox.svg'
 import { CSSClassnames, Repeat } from "../../constants"
+
+// Assets
+import CheckboxSVG from "../../assets/Checkbox"
 
 // Styles
 import './index.css'
@@ -38,7 +39,7 @@ export default function Checkbox({ onClick, className, ...props }: CheckboxProps
             onClick={handleClick}
             className={button_ClassNames}>
             {
-                Active && <img src={CheckboxSVG} width={24} height={24} />
+                Active && <CheckboxSVG />
             }
         </button>
     )

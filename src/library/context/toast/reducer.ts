@@ -2,11 +2,11 @@ export default function functionalReducer(prevState: LuterJs.ToastElements, { ac
     const newState = [...prevState]
 
     const ActionList: Record<
-        LuterJs.functionalReducerProps['action'],
+    LuterJs.functionalReducerProps['action'],
         () => void> = {
         add: function (): void {
             if (data === undefined) throw new Error("Informacion no proporcionada");
-            newState.push(data)
+            newState.push({ ...data, id: crypto.randomUUID() })
         },
         remove: function (): void {
             if (index === undefined) throw new Error("Posicion del elemento no especificado");

@@ -1,5 +1,10 @@
+declare namespace LuterHooks {
+    interface addToastProps { title: string, description: string }
+}
+
 declare namespace LuterJs {
     interface ToastSingleElement {
+        id?: string;
         title: string;
         description: string;
     }

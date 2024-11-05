@@ -8,8 +8,9 @@ export default function useToast() {
 
     const { ToastElements, EditToasts } = Context
 
-    interface addToastProps { title: string, description: string }
-    const addToast = ({ title, description }: addToastProps) => {
+    const ToastCount: number = ToastElements.length
+
+    const addToast = ({ title, description }: LuterHooks.addToastProps) => {
         EditToasts({
             action: 'add',
             data: { title, description },
@@ -29,6 +30,7 @@ export default function useToast() {
         addToast,
         removeToast,
         removeAllToast,
+        ToastCount,
         ToastElements
     }
 }

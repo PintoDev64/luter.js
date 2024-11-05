@@ -21,8 +21,8 @@ export default function Toasts({ Component, className }: ToastsProps) {
     return (
         <div className={toasts_ClassNames}>
             {
-                ToastElements.map((props, index) =>
-                    <Component index={index} {...props} />
+                ToastElements.map(({ id, ...props }, index) =>
+                    index <= 2 && <Component key={id} index={index} {...props} />
                 )
             }
         </div>
