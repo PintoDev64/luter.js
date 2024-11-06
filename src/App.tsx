@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <>
-      <Toggle borderRadius="round" image="https://yt3.ggpht.com/-tIM3_1Ehi92NTNIBJzvD2ySWYJowagr7ar8D3oupVSSNNsL8RRYvAm21tLXq2zIUeHlsCN8pw=s88-c-k-c0x00ffffff-no-rj"/>
+      <Toggle borderRadius="round" image="https://i.pinimg.com/736x/31/8a/29/318a29182741def07dd911f159c5bcc0.jpg"/>
       <Switch />
       <Checkbox />
       <Toasts Component={Toast} />

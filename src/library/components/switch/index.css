@@ -17,6 +17,7 @@
     margin: 0;
     border: none;
     outline: none;
+    box-sizing: border-box;
     border-radius: var(--BorderRadius);
     border: 1px var(--BorderColor) solid;
     transition: all .2s ease;

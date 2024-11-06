@@ -37,6 +37,7 @@ export default function Toast({ title, description, index }: ToastProps) {
 
     useEffect(() => {
         setTimeout(() => setAnimationClassName(""), 500);
+        setTimeout(() => removeToast(index), 5000);
     }, []);
 
     return (
