@@ -6,6 +6,7 @@
 
     min-width: 250px;
     width: 250px;
+    height: 10px;
     min-height: 10px;
     max-height: 10px;
     border-radius: var(--borderRadius);

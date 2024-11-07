@@ -13,7 +13,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
       name: 'luter.component',
-      // Se agregará la extension apropiada.
+      formats: ['es'],
       fileName: 'index',
     },
     rollupOptions: {

@@ -1,6 +1,6 @@
 {
   "name": "luter.component",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Libreria de componentes ligera",
   "author": "PintoDev64",
   "type": "module",
@@ -8,15 +8,8 @@
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.umd.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.umd.cjs"
-    },
-    "./styles": "./dist/styles.css"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/PintoDev64/luter.js"
