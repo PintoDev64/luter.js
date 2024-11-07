@@ -1,0 +1,43 @@
+.LuterJs-Component-Switch {
+    --BackgroundColor: #EBEBEB;
+    --BackgroundColor_buttonDesactive: #565656;
+    --BackgroundColor_buttonActive: #4772B3;
+    --BackgroundColor_divDesactive: #000000;
+    --BackgroundColor_divActive: #EBEBEB;
+
+    --BorderColor: #000000;
+
+    --BorderRadius: 20px;
+
+    --BorderSpaceing: 5px;
+
+    width: 60px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: var(--BorderRadius);
+    border: 1px var(--BorderColor) solid;
+    transition: all .2s ease;
+    background-color: var(--BackgroundColor_buttonDesactive);
+}
+
+.LuterJs-Component-Switch.Active {
+    border: 1px var(--BackgroundColor_buttonActive) solid;
+    background-color: var(--BackgroundColor_buttonActive);
+}
+
+.LuterJs-Component-Switch_div {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--BorderRadius);
+    transition: all .2s ease;
+    transform: translateX(var(--BorderSpaceing));
+    background-color: var(--BackgroundColor_divDesactive);
+}
+
+.LuterJs-Component-Switch_div.Active {
+    transform: translateX(calc(60px - 20px - var(--BorderSpaceing)));
+    background-color: var(--BackgroundColor_divActive);
+}

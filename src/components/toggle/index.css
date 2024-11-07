@@ -1,0 +1,41 @@
+.LuterJs-Component-Toggle {
+    --BackgroundColor: #EBEBEB;
+    --BackgroundColorHover: #565656;
+    --BackgroundColorActive: #4772B3;
+
+    --BorderColor: #000000;
+
+    --BorderRadiusModerate: 8px;
+    --BorderRadiusRound: 30px;
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    display: grid;
+    place-content: center;
+    transition: all .2s ease;
+    border: 1px var(--BorderColor) solid;
+    box-sizing: border-box;
+    background-color: var(--BackgroundColorHover);
+}
+
+.LuterJs-Component-Toggle_img {
+    aspect-ratio: 1/1;
+    border-radius: var(--BorderRadiusRound);
+}
+
+.LuterJs-Component-Toggle.Active {
+    border: 1px var(--BackgroundColorActive) solid;
+    background-color: var(--BackgroundColorActive);
+}
+
+.LuterJs-Component-Toggle.moderate {
+    border-radius: var(--BorderRadiusModerate);
+}
+
+.LuterJs-Component-Toggle.round {
+    border-radius: var(--BorderRadiusRound);
+}
