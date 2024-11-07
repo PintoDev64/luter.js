@@ -1,0 +1,118 @@
+.LuterJs-Component-Selector {
+    --TextColor: #FFFFFF;
+    --BackgroundColor: #353535;
+    --BackgroundHoverColor: #565656;
+
+    --BorderRadius: 2px;
+
+    --AnimationTime: .2s,
+
+    position: relative;
+    min-width: 52px;
+    width: 52px;
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+    max-height: 32px;
+    padding: 0;
+    outline: 0;
+    border: none;
+    justify-content: space-evenly;
+    background-color: var(--BackgroundColor);
+    border-radius: var(--BorderRadius);
+    transition: all var(--AnimationTime) ease;
+}
+
+.LuterJs-Component-Selector:hover {
+    background-color: var(--BackgroundHoverColor);
+}
+
+.LuterJs-Component-Selector>img {
+    width: 25px;
+    height: 25px;
+    user-select: none;
+    pointer-events: none;
+    border-radius: var(--BorderRadius);
+}
+
+.LuterJs-Component-Selector>svg {
+    width: 13px;
+    height: 10px;
+}
+
+.LuterJs-Component-Selector_container {
+    position: absolute;
+    display: none;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: var(--BorderRadius);
+}
+
+
+.LuterJs-Component-Selector>span,
+.LuterJs-Component-Selector_container img,
+.LuterJs-Component-Selector_container span {
+    user-select: none;
+    pointer-events: none;
+    color: var(--TextColor);
+    font-size: 18px;
+}
+
+.LuterJs-Component-Selector_container.Active {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 200px;
+    height: fit-content;
+    max-height: 400px;
+    background-color: var(--BackgroundColor);
+}
+
+.LuterJs-Component-Selector_element {
+    gap: 10px;
+    padding: 2.5px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    border-radius: var(--BorderRadius);
+    transition: all var(--AnimationTime) ease;
+}
+
+.LuterJs-Component-Selector_element:hover {
+    background-color: var(--BackgroundHoverColor);
+}
+
+.LuterJs-Component-Selector_container.Active.top {
+    transform: translateY(calc(50% + 21px));
+}
+
+.LuterJs-Component-Selector_container.Active.top-left {
+    transform: translate(calc(50% + 31px), calc(50% + 21px));
+}
+
+.LuterJs-Component-Selector_container.Active.left {
+    transform: translateX(calc(50% + 31px));
+}
+
+.LuterJs-Component-Selector_container.Active.top-right {
+    transform: translate(calc(-50% - 31px), calc(50% + 21px));
+}
+
+.LuterJs-Component-Selector_container.Active.bottom {
+    transform: translateY(calc(-50% - 21px));
+}
+
+.LuterJs-Component-Selector_container.Active.bottom-right {
+    transform: translate(calc(-50% - 31px), calc(-50% - 21px));
+}
+
+.LuterJs-Component-Selector_container.Active.right {
+    transform: translateX(calc(-50% - 31px));
+}
+
+.LuterJs-Component-Selector_container.Active.bottom-left {
+    transform: translate(calc(50% + 31px), calc(-50% - 21px));
+}

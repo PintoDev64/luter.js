@@ -1,4 +1,5 @@
 import { LuterJs } from "../../types";
+import { createRandomID } from "../../utils";
 
 export default function functionalReducer(prevState: LuterJs.ToastElements, { action, index, data }: LuterJs.functionalReducerProps): LuterJs.ToastElements {
     const newState = [...prevState]
@@ -8,7 +9,7 @@ export default function functionalReducer(prevState: LuterJs.ToastElements, { ac
         () => void> = {
         add: function (): void {
             if (data === undefined) throw new Error("Informacion no proporcionada");
-            newState.push({ ...data, id: crypto.randomUUID() })
+            newState.push({ ...data, id: createRandomID() })
         },
         remove: function (): void {
             if (index === undefined) throw new Error("Posicion del elemento no especificado");
