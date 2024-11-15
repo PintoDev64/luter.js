@@ -56,6 +56,8 @@ export default function SelectorItems({ active, reference, data, onClick }: Sele
         else setPosition('bottom');  // Default position if no edge is nearby
     }, [reference.clientHeight, reference.clientWidth, reference.clientX, reference.clientY]);
 
+    if (data === null || data.length > 0) return <></>
+
     return (
         <div className={containerClassNames}>
             {data.map(({ text, image }, index) =>

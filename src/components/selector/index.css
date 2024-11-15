@@ -7,14 +7,15 @@
 
     --AnimationTime: .2s,
 
-    position: relative;
+        position: relative;
     min-width: 52px;
-    width: 52px;
+    width: fit-content;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     min-height: 32px;
     max-height: 32px;
-    padding: 0;
+    padding: 5px;
     outline: 0;
     border: none;
     justify-content: space-evenly;
@@ -23,6 +24,7 @@
     transition: all var(--AnimationTime) ease;
 }
 
+.LuterJs-Component-Selector.Active,
 .LuterJs-Component-Selector:hover {
     background-color: var(--BackgroundHoverColor);
 }
@@ -38,6 +40,10 @@
 .LuterJs-Component-Selector>svg {
     width: 13px;
     height: 10px;
+}
+
+.LuterJs-Component-Selector>span {
+    margin: 0 5px;
 }
 
 .LuterJs-Component-Selector_container {

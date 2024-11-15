@@ -31,6 +31,7 @@ export function Selector({ onClick, data, className, init }: SelectorProps) {
 
     const buttonClassNames = [
         className,
+        selectorState ? "Active": "Desactive",
         `${CSSClassnames.Library}-Component-Selector`
     ].join(Repeat.WhiteSpace);
 
